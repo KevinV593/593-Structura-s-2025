@@ -65,6 +65,15 @@ public:
         cout << "Producto de posiciones impares: " << multiplicacion << endl;
         return multiplicacion;
     }
+
+    ~Lista() {
+    Nodo* actual = head;
+    while (actual != nullptr) {
+        Nodo* nodoAEliminar = actual;   
+        actual = actual->next;     
+        delete nodoAEliminar;           
+        }
+    }
 };
 
 // Función principal
